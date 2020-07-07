@@ -14,8 +14,8 @@ Feel free to bookmark this page for future reference!
 |---|---|
 | **Slide deck** | [Slide deck for the workshop](slides/Presentation.pdf) |
 | **0. Prerequisites** | [Make sure you did steps I and III of the Week I](../week1%20-%20Getting%20Started%20with%20Cassandra) |
-| **1 -  Data Model** | Upload the notebook [Data Model](notebooks/DataModel.tar?raw=true) into running instance of DataStax Studio and follow the instructions  |
-| **2 - Advanced Data Types** | Upload the notebook [Advanced Data Types](notebooks/AdvancedDataTypes.tar?raw=true) into running instance of DataStax Studio and follow the instructions  |
+| **1.  Data Model** | Upload the notebook [Data Model](notebooks/DataModel.tar?raw=true) into running instance of DataStax Studio and follow the instructions  |
+| **2. Advanced Data Types** | Upload the notebook [Advanced Data Types](notebooks/AdvancedDataTypes.tar?raw=true) into running instance of DataStax Studio and follow the instructions  |
 | **Homework** | Finish the exercises of the week II, watch the [DS220 course](https://academy.datastax.com/resources/ds220) (videos ONLY).  |
 | **Bonus** | Want some more? We are happy to see you so hungry for the knowledge! Do the proper steps of our [Katacoda course!](https://katacoda.com/datastax/courses/cassandra-intro) (Detailed explanations below) |
 
