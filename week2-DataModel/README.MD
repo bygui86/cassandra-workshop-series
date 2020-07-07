@@ -70,4 +70,4 @@ If you want even more (wow!), there are the katacoda scenarios to make you bette
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
-![Well Done](../materials/images/weekiidone.jpg?raw=true)
+![Well Done](../materials/images/weekiidone.png?raw=true)
