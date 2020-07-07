@@ -1,14 +1,20 @@
 🎓🔥 Welcome to WEEK 2 of the Cassandra Workshop Series 🔥🎓
 ======================================================
 
+## Workshops
+
+Workshops feature different speakers but the content is the same. Please choose the one better for your timezone. The workshop videos WILL BE AVAILABLE after the workshop!
+
+* 📅 [July 8th 12EDT *(NA, LATAM)*](https://youtu.be/5NoixINC9l4) 
+* 📅 [July 9th 12:30 IST *(APAC, EMEA)*](https://youtu.be/V7dnCeJrtD4)
+
+![BANNER](https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F104032164%2F312276190164%2F1%2Foriginal.20200619-083832?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=280bc415dcd91bae37c8e3729447c6fb)
+
+## Materials
+
 In this repository, you'll find everything you need for week 2 of the online Cassandra Workshop Series:
 - Materials used during presentations
 - Hands-on exercises
-
-Feel free to bookmark this page for future reference!
-![BANNER](https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F104032164%2F312276190164%2F1%2Foriginal.20200619-083832?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=280bc415dcd91bae37c8e3729447c6fb)
-
-## Table of Contents
 
 | Title  | Description
 |---|---|
