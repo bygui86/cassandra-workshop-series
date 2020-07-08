@@ -1,0 +1,11 @@
+
+---[ Cassandra workshop series - Links ]---
+
+
+Materials		github.com/DataStax-Academy
+Runtime			astra.datastax.com
+Questions		bit.ly/cassandra-workshop
+Forum			community.datastax.com
+Quizz			menti.com (45 45 72)
+Training		academy.datastax.com
+Certification	bit.ly/cassandra-cert-FREE
