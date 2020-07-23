@@ -3,6 +3,6 @@
 
 
 ## Bonus tasks
-https://katacoda.com/datastax/courses/cassandra-intro/tables-single-row-partitions
-https://katacoda.com/datastax/courses/cassandra-intro/tables-multi-row-partitions
-https://katacoda.com/datastax/courses/cassandra-intro/advanced-data-types
+	https://katacoda.com/datastax/courses/cassandra-intro/tables-single-row-partitions
+	https://katacoda.com/datastax/courses/cassandra-intro/tables-multi-row-partitions
+	https://katacoda.com/datastax/courses/cassandra-intro/advanced-data-types
