@@ -1,0 +1,6 @@
+
+---[ Cassandra workshop series - Week 4 - Links ]---
+
+
+https://github.com/datastax/cassandra-quarkus
+	https://github.com/datastax/cassandra-quarkus/tree/master/quickstart

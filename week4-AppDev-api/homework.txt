@@ -1,0 +1,21 @@
+
+---[ Cassandra workshop series - Week 4 - Homeworks ]---
+
+
+https://community.datastax.com/questions/6738/materials-and-homework-for-week-4.html
+
+
+1.	Finish the workshop exercises from week 3.
+	It is essential that you have (1) your database setup on Astra and (2) learned how to use Gitpod already in order to do Week 4.
+
+2.	Watch this video introducing Kafka + Cassandra
+	Modern Data Architectures with Kafka and Cassandra
+	https://www.youtube.com/watch?v=fuT1Ryez_WU
+
+3.	(temporarily unavailable)
+	Do the [short] DataStax Apache Kafka™ Connector course at DataStax Academy
+	https://academy.datastax.com/resources/getting-started-datastax-apache-kafka%E2%84%A2-connector
+
+4.	(optional)
+	Watch DataStax Accelerate -- A NoSQL Original Series
+	https://www.datastax.com/accelerate
