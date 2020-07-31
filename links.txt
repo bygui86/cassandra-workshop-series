@@ -2,6 +2,8 @@
 ---[ Cassandra workshop series - Links ]---
 
 
+Origin			https://github.com/DataStax-Academy/cassandra-workshop-series
+
 Materials		github.com/DataStax-Academy
 Runtime			astra.datastax.com
 Questions		bit.ly/cassandra-workshop
