@@ -16,7 +16,7 @@ Now if you are NOT familiar with any of those, we recommended to use Python, the
 
 | Materials  | Description and Links
 |---|---|
-| Slidedeck | [SLIDEDECK](./materials/presentation-week4.pdf) |
+| Slidedeck | [SLIDEDECK](slides/Presentation.pdf) |
 | Chat with us on Discord | [DISCORD](https://bit.ly/cassandra-workshop) |
 | Ask Question during week | [COMMUNITY](https://community.datastax.com/spaces/172/index.html) |
 | Recording LIVESTREAM NA, LATAM |  📅 [July 22th 12EDT](https://youtu.be/MiR9ibjr7Fw) |
