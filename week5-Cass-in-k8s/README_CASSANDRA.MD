@@ -16,7 +16,7 @@ If at any point you need to naviagte to one of the other sections use the links 
 |---|---|---|
 | Installation and prerequisites | [Section](./README.MD) | Required |
 | **Working with the Cassandra Operator** | [Section](./README_CASSANDRA.MD)  | Required |
-| Metrics in Prometheus & Grafana | [Section](./README_METRICS_DSE.MD)  | Required |
+| Metrics in Prometheus & Grafana | [Section](./README_METRICS.MD)  | Required |
 | K8s Dashboard | [Section](./README_DASHBOARD.MD)  | Bonus |
 
 ## Exercises
@@ -939,7 +939,7 @@ At this point your Cassandra Cluster must be ready. Click on the **Instructions*
 
 | Sections | Material Description
 | - |---|
-| **Metrics, Management, Visualisation** | [Instructions](./README_METRICS_DSE.MD) |
+| **Metrics, Management, Visualisation** | [Instructions](./README_METRICS.MD) |
 
 [🏠 Back to Table of Contents](#exercises)
 

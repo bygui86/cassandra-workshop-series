@@ -26,7 +26,7 @@ In this repository, you'll find everything you need related to `week 5` of the *
 |---|---|---|
 | **Installation and prerequisites** | [Section](#1-create-a-kubernetes-cluster) | Required |
 | Working with the Cassandra Operator | [Section](./README_CASSANDRA.MD)  | Required |
-| Metrics in Prometheus & Grafana | [Section](./README_METRICS_DSE.MD)  | Required |
+| Metrics in Prometheus & Grafana | [Section](./README_METRICS.MD)  | Required |
 | K8s Dashboard | [Section](./README_DASHBOARD.MD)  | Bonus |
 
 **!! IMPORTANT IMPORTANT IMPORTANT !!** 
