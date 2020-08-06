@@ -143,21 +143,28 @@ Note that these Dockerfiles do essentially the same: They start with a minimum r
 
 ✅  **Step4a:**  Next you will need to build your docker images with the following commands.  Keep in mind these commands can take the better part of 10 minutes. In order to be able to use them in our kind cluster, we need to tag these images (tagging is not optional). We are using the tag `my-image` here in this example.  Choose your favorate language and the corrisponding commands below:
 
+##### Build UI:
+
 ```bash
 cd ../
 docker build ./getting-started-with-astra-ui -t astra-ui:my-image
 ```
+
+##### Build backend:
 
 **![JAVA](https://raw.githubusercontent.com/DataStax-Academy/cassandra-workshop-series/master/materials/images/logo-java.png)**
 
 ```bash
 mvn clean package dockerfile:build
 ```
-**![PYTHON](https://raw.githubusercontent.com/DataStax-Academy/cassandra-workshop-series/master/materials/images/logo-python.png)**
+
+`⚠️ WARN` this command could produce a not valid jar inside the docker image, in this case, please use following commands
 
 ```bash
-docker build ./getting-started-with-astra-python -t astra-backend:my-image
+mvn clean install
+docker build . -t astra-backend:my-image --build-arg JAR_FILE=target/getting-started-with-astra-java-1.0.0-SNAPSHOT.jar
 ```
+
 ✅  **Step4b:** As an optional step, we can test our docker containers for the connection with Astra, before we use them in the kubernetes cluster.
 
 ```bash
