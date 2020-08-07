@@ -110,7 +110,7 @@ FROM python:alpine3.7
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-EXPOSE 5000
+EXPOSE 9090
 CMD ["python", "getting_started_with_astra.py"]
 ```
 
@@ -122,7 +122,7 @@ VOLUME /tmp
 ARG JAR_FILE
 ADD ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-EXPOSE 5000
+EXPOSE 9090
 ```
 
 📗  For the frontend the `Dockerfile` will look like the following
@@ -158,21 +158,21 @@ docker build ./getting-started-with-astra-ui -t astra-ui:my-image
 mvn clean package dockerfile:build
 ```
 
-`⚠️ WARN` this command could produce a not valid jar inside the docker image, in this case, please use following commands
+**![PYTHON](https://raw.githubusercontent.com/DataStax-Academy/cassandra-workshop-series/master/materials/images/logo-python.png)**
 
 ```bash
-mvn clean install
-docker build . -t astra-backend:my-image --build-arg JAR_FILE=target/getting-started-with-astra-java-1.0.0-SNAPSHOT.jar
+docker build ./getting-started-with-astra-python -t astra-backend:my-image
 ```
-
 ✅  **Step4b:** As an optional step, we can test our docker containers for the connection with Astra, before we use them in the kubernetes cluster.
 
 ```bash
-docker run -e USE_ASTRA='true' -p 5000:5000 astra-backend:my-image
-docker run -e USE_ASTRA='true' -e BASE_ADDRESS='http://localhost:5000/api' -p 3000:3000 astra-ui:my-image
+docker run -e USE_ASTRA='true' -p 9090:9090 astra-backend:my-image
+docker run -e USE_ASTRA='true' -e BASE_ADDRESS='http://localhost:9090/api' -p 3000:3000 astra-ui:my-image
 ```
 
-Navigate to [http://localhost:5000](http://localhost:5000) and to [http://localhost:3000](http://localhost:3000), complete the connection dialog with your details, and connect to your Astra database. 
+Navigate to [http://localhost:9090](http://localhost:9090) and to [http://localhost:3000](http://localhost:3000), complete the connection dialog with your details, and connect to your Astra database. 
+
+⚠️ If you're using a DataStax cloud instance, remember to use the EC2 instance name in place of `localhost`, for example: `http://wksv136191.cws-week6.datastaxtraining.com:9090/`.
 
 Stop the docker containers:
 
@@ -260,13 +260,15 @@ kind: ConfigMap
 metadata:
   name: env-config
 data:
-  BASE_ADDRESS: 'http://localhost:5000/api'
+  BASE_ADDRESS: 'http://localhost:9090/api'
   USE_ASTRA: 'true'
   CONNECTION_POINTS: 'cluster1-dc1-service.cass-operator.svc.cluster.local'
   KEYSPACE: 'killrvideo'
   USERNAME: 'cluster1-superuser'
   PASSWORD:'C3dFhtsR68sIJYbs_cI_Tz5TFC4XVinS-O_f2jN9Lc1x6mHqIokk2Q'
 ```
+
+⚠️ If you're using a DataStax cloud instance, remember to use the EC2 instance name in place of `localhost`, for example: `http://wksv136191.cws-week6.datastaxtraining.com:9090/api`.
 
 Feel free to look at the 06-backend.yaml and the 07-ui.yaml to see the specific configuration option used there.  
 
@@ -361,11 +363,11 @@ kubectl -n my-app apply -f 07-ui.yaml
 ✅  **Step5h:** Lastly we need to forward the ports to the host so that we can hit the services from our browser.
 
 ```bash
-kubectl -n my-app port-forward pods/astra-backend 5000:5000 &
-kubectl -n my-app  port-forward pods/astra-ui 3000:3000 &
+kubectl -n my-app port-forward --address 0.0.0.0 pod/astra-backend 9090 &
+kubectl -n my-app port-forward --address 0.0.0.0 pod/astra-ui 3000 &
 ```
 
-✅  **Step5i:** Navigate to [http://localhost:3000](http://localhost:3000) for the UI and [http://localhost:5000](http://localhost:5000) for the backend.
+✅  **Step5i:** Navigate to [http://localhost:3000](http://localhost:3000) for the UI and [http://localhost:9090](http://localhost:9090) for the backend.
 
 ⚠️ You will still need a plugin that unblocks CORS requests for you. 
 
