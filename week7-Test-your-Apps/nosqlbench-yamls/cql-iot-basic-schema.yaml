@@ -1,32 +1,49 @@
+
+# When benchmarking you're attempting to emulate what your system performance looks like under realistic conditions.
+# This includes access patterns, data density, and factoring in headroom that any highly available system requires.
+# Response, throughput, and data density are always connected. Every database performs differently at higher density 
+# for read operations, thus it is imperative that you qualify your results with all three parameters: 
+# throughput, latency, and density.
+
+# comment at the top of the file that shows how to run the workload as well as a description of the workload
 # nb run driver=cql workload=cql-iot-basic-schema.yaml threads=auto cycles=3
 description: |
   This workload emulates a time-series data model schema creation.
 
+# the remainder of this file is a list named blocks containing a single block.
 blocks:
+    # each block has tags.
   - tags:
       phase: schema
+
     params:
+      # tell nb none of the following statements needs to be prepared. Since these are used only once for schema creation they do not need to be prepared
       prepared: false
+
+    # set the statements (3 in our example) that will be executed within this phase
+    # notice within each statement type are the CQL statements to execute
+    # these are exactly the same as the statements you might execute within cqlsh or from within your application.
     statements:
-     - create-keyspace: |
-        create keyspace if not exists baselines
-        WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}
-        AND durable_writes = true;
-     - create-table : |
-        create table if not exists baselines.iot (
-        machine_id UUID,     // source machine
-        sensor_name text,    // sensor name
-        time timestamp,      // timestamp of collection
-        sensor_value double, //
-        station_id UUID,     // source location
-        data text,
-        PRIMARY KEY ((machine_id, sensor_name), time)
-        ) WITH CLUSTERING ORDER BY (time DESC)
-         AND compression = { 'sstable_compression' : 'LZ4Compressor' }
-         AND compaction = {
-         'class': 'TimeWindowCompactionStrategy',
-         'compaction_window_size': 60,
-         'compaction_window_unit': 'MINUTES'
-        };
-     - truncate-table: |
-         truncate table baselines.iot;
+      - create-keyspace: |
+          create keyspace if not exists baselines
+          WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}
+          AND durable_writes = true;
+      - create-table : |
+          create table if not exists baselines.iot (
+          machine_id UUID,     // source machine
+          sensor_name text,    // sensor name
+          time timestamp,      // timestamp of collection
+          sensor_value double, //
+          station_id UUID,     // source location
+          data text,
+          PRIMARY KEY ((machine_id, sensor_name), time)
+          ) WITH CLUSTERING ORDER BY (time DESC)
+          AND compression = { 'sstable_compression' : 'LZ4Compressor' }
+          AND compaction = {
+          'class': 'TimeWindowCompactionStrategy',
+          'compaction_window_size': 60,
+          'compaction_window_unit': 'MINUTES'
+          };
+        # truncating the table in case it already exists to ensure data is clean
+      - truncate-table: |
+          truncate table baselines.iot;
