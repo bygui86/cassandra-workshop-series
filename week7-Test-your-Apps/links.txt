@@ -1,0 +1,9 @@
+
+---[ Cassandra workshop series - Week 7 - Links ]---
+
+
+https://katacoda.com/datastax/courses/nosqlbench-intro/nosqlbench
+	https://katacoda.com/datastax/courses/nosql bench-intro/nosqlbench-grafana
+	https://katacoda.com/datastax/courses/nosql bench-intro/nosqlbench-modify-workload
+https://github.com/DataStax-Academy/nosqlbench-workshop-online
+https://www.katacoda.com/datastax
