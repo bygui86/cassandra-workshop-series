@@ -1,8 +1,0 @@
-
----[ Cassandra workshop series - Week 2 - Additionals ]---
-
-
-## Bonus tasks
-	https://katacoda.com/datastax/courses/cassandra-intro/tables-single-row-partitions
-	https://katacoda.com/datastax/courses/cassandra-intro/tables-multi-row-partitions
-	https://katacoda.com/datastax/courses/cassandra-intro/advanced-data-types

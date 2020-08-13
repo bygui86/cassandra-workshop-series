@@ -1,5 +1,5 @@
 
----[ Cassandra workshop series - Week 4 - Homeworks ]---
+---[ Cassandra workshop series - Week 4 - Homework ]---
 
 
 https://community.datastax.com/questions/6738/materials-and-homework-for-week-4.html
