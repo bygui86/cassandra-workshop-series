@@ -1,6 +1,6 @@
 ![banner](https://raw.githubusercontent.com/DataStax-Academy/cassandra-workshop-series/master/materials/images/banner2.png)
 
-# ✨ Application Development Your App in Kuberneties ✨
+# ✨ Application Development Your App in Kubernetes ✨
 [![License Apache2](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Discord](https://img.shields.io/discord/685554030159593522)](https://discord.com/widget?id=685554030159593522&theme=dark)
 
@@ -170,6 +170,8 @@ docker run -e USE_ASTRA='true' -p 9090:9090 astra-backend:my-image
 docker run -e USE_ASTRA='true' -e BASE_ADDRESS='http://localhost:9090/api' -p 3000:3000 astra-ui:my-image
 ```
 
+*WARNING - Update the code in your cluster - see here for more details: https://community.datastax.com/questions/7478/index.html*
+
 Navigate to [http://localhost:9090](http://localhost:9090) and to [http://localhost:3000](http://localhost:3000), complete the connection dialog with your details, and connect to your Astra database. 
 
 ⚠️ If you're using a DataStax cloud instance, remember to use the EC2 instance name in place of `localhost`, for example: `http://wksv136191.cws-week6.datastaxtraining.com:9090/`.
@@ -261,7 +263,7 @@ metadata:
   name: env-config
 data:
   BASE_ADDRESS: 'http://localhost:9090/api'
-  USE_ASTRA: 'true'
+  USE_ASTRA: 'false'
   CONNECTION_POINTS: 'cluster1-dc1-service.cass-operator.svc.cluster.local'
   KEYSPACE: 'killrvideo'
   USERNAME: 'cluster1-superuser'
@@ -269,6 +271,8 @@ data:
 ```
 
 ⚠️ If you're using a DataStax cloud instance, remember to use the EC2 instance name in place of `localhost`, for example: `http://wksv136191.cws-week6.datastaxtraining.com:9090/api`.
+
+![WARNING - Update the code in your cluster](https://community.datastax.com/storage/attachments/1292-workshop-week6-pull-code-update.png)
 
 Feel free to look at the 06-backend.yaml and the 07-ui.yaml to see the specific configuration option used there.  
 
@@ -368,6 +372,8 @@ kubectl -n my-app port-forward --address 0.0.0.0 pod/astra-ui 3000 &
 ```
 
 ✅  **Step5i:** Navigate to [http://localhost:3000](http://localhost:3000) for the UI and [http://localhost:9090](http://localhost:9090) for the backend.
+
+![WARNING - Update the code in your cluster](https://community.datastax.com/storage/attachments/1292-workshop-week6-pull-code-update.png)
 
 ⚠️ You will still need a plugin that unblocks CORS requests for you. 
 
